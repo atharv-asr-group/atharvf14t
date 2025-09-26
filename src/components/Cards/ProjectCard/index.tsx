@@ -37,13 +37,13 @@ export default function ProjectCard({
         <h3 className={`${styles.label} h-[3.4rem] text-[18px] text-white`}>
           {projectDetail.name}
         </h3>
-        <ScrollShadow hideScrollBar className="h-16">
+        <ScrollShadow hideScrollBar className="h-16 relative z-10">
           <p className={`font-[6px] text-white `}>{projectDetail.des}</p>
         </ScrollShadow>
       </div>
 
       <Divider className="my-3 bg-[#ffffff18]" />
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap relative z-20 gap-2">
         {projectDetail.skills?.map((skill, index) => {
           return (
             <Chip
@@ -60,7 +60,7 @@ export default function ProjectCard({
       </div>
 
       <Divider className="my-3 bg-[#ffffff18]" />
-      <div className="flex w-full justify-between px-4">
+      <div className="flex w-full justify-between px-4 relative z-20">
         <Link href={projectDetail.github} target="_blank">
           <Button isIconOnly color="primary" variant="bordered">
             <FaGithub />
