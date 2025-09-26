@@ -7,7 +7,7 @@ export const Atharv = () => {
   const renderReviews = () => {
     const reviews = [];
 
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 8; i++) {
       reviews.push(
         <Image
           key={i}
