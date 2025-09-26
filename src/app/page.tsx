@@ -1,4 +1,3 @@
-'use client';
 import Hero from '@/components/Sections/Hero';
 import { NextUIProvider } from '@nextui-org/react';
 
@@ -8,7 +7,6 @@ import MainClientSections from '@/components/Sections/main-client-sections';
 
 export default function Home() {
   return (
-    <NextUIProvider>
       <main>
         <div className="hello-section" id="hello">
           <Navigation />
@@ -17,7 +15,6 @@ export default function Home() {
         <Reviews />
         <MainClientSections />
       </main>
-    </NextUIProvider>
     
   );
 }
