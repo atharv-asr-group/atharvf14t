@@ -17,10 +17,10 @@ function MainClientSections() {
         projects={personalProjects}
         heading="Personal Projects"
       />
-      <ProjectsCarousel
+      {/* <ProjectsCarousel
         projects={freelanceProjects}
         heading="Freelance Projects (60+ Overall)"
-      />
+      /> */}
       {/* <ProjectsCarousel
         projects={opensourceProjects}
         heading="Opensource Projects"
