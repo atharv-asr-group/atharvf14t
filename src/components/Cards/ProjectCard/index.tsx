@@ -1,10 +1,8 @@
 import React from 'react';
 import {
   Image,
-  Button,
   Divider,
   Link,
-  Chip,
   ScrollShadow,
 } from '@nextui-org/react';
 import { styles } from '@/styles/styles';
@@ -22,7 +20,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
-      className={`w-[320px] overflow-hidden  rounded-xl border-none bg-background/60 p-3 shadow-lg md:w-[400px] ${classNames}`}
+      className={`w-[320px] overflow-hidden rounded-xl border-none bg-background/60 p-3 shadow-lg md:w-[400px] ${classNames}`}
     >
       <div className="relative">
         <Image
@@ -44,32 +42,33 @@ export default function ProjectCard({
 
       <Divider className="my-3 bg-[#ffffff18]" />
       <div className="flex flex-wrap relative z-20 gap-2">
-        {projectDetail.skills?.map((skill, index) => {
-          return (
-            <Chip
-              key={index}
-              color="warning"
-              variant="solid"
-              radius="md"
-              startContent={skill.icon}
-            >
-              {skill.name}
-            </Chip>
-          );
-        })}
+        {projectDetail.skills?.map((skill, index) => (
+          <span
+            key={index}
+            className="inline-flex items-center gap-1 rounded-md bg-yellow-500 px-3 py-1 text-sm font-medium text-black shadow transition hover:bg-yellow-600"
+          >
+            {skill.icon}
+            {skill.name}
+          </span>
+        ))}
       </div>
 
       <Divider className="my-3 bg-[#ffffff18]" />
       <div className="flex w-full justify-between px-4 relative z-20">
-        <Link href={projectDetail.github} target="_blank">
-          <Button isIconOnly color="primary" variant="bordered">
+        <Link href={projectDetail.github} target="_blank" className="no-underline">
+          <button
+            className="inline-flex items-center justify-center rounded-xl border-2 border-primary bg-transparent px-4 py-2 text-primary transition hover:bg-primary hover:text-white"
+            aria-label="GitHub"
+          >
             <FaGithub />
-          </Button>
+          </button>
         </Link>
-        <Link href={projectDetail.demo} target="_blank">
-          <Button color="primary" variant="bordered" href={projectDetail.demo}>
+        <Link href={projectDetail.demo} target="_blank" className="no-underline">
+          <button
+            className="inline-flex items-center rounded-xl border-2 border-primary bg-primary px-4 py-2 text-white transition hover:bg-primary/80"
+          >
             Demo
-          </Button>
+          </button>
         </Link>
       </div>
     </div>
