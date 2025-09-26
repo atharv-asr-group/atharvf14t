@@ -26,7 +26,7 @@ export const Atharv = () => {
   return (
     <div className="py-4 md:py-10" id="reviews">
       <h1 className={`text_sub_heading_size text-center font-Monserrat`}>
-        Atharv Srivastava - I'm a car enthusiast ;)
+        Atharv Srivastava 
       </h1>
       <div className="flex w-full justify-center pt-3">
         <div className="h-[2px] w-[50px] bg-primary" />

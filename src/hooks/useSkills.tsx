@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import { BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi';
-import { FaDocker, FaEthereum, FaHardHat, FaPython } from 'react-icons/fa';
-import { SiNestjs, SiPytorch, SiScikitlearn, SiSolidity } from 'react-icons/si';
+import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi';
+import { FaDocker, FaPython } from 'react-icons/fa';
+import { SiPytorch, SiScikitlearn } from 'react-icons/si';
 import { FiTriangle } from "react-icons/fi";
 
 import {
@@ -41,33 +41,13 @@ export const allSkills: AllSkillsObjectType = {
     name: 'Typescript',
     icon: <BiLogoTypescript />,
   },
-  nestjs: {
-    name: 'NestJs',
-    icon: <SiNestjs />,
-  },
   tailwindcss: {
     name: 'TailwindCss',
     icon: <TbBrandTailwind />,
   },
-  sass: {
-    name: 'Sass',
-    icon: <BiLogoSass />,
-  },
   docker: {
     name: 'Docker',
     icon: <FaDocker />,
-  },
-  solidity: {
-    name: 'Solidity',
-    icon: <SiSolidity />,
-  },
-  etherjs: {
-    name: 'Ether.Js',
-    icon: <FaEthereum />,
-  },
-  hardhat: {
-    name: 'Hardhat',
-    icon: <FaHardHat />,
   },
   python: {
     name: 'Python',

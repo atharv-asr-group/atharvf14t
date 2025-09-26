@@ -35,9 +35,9 @@ export default function ProjectCard({
         <h3 className={`${styles.label} h-[3.4rem] text-[18px] text-white`}>
           {projectDetail.name}
         </h3>
-        <ScrollShadow hideScrollBar className="h-16 relative z-10">
-          <p className={`font-[6px] text-white `}>{projectDetail.des}</p>
-        </ScrollShadow>
+        <div className="h-16 m-2 overflow-y-auto scrollbar-thin scrollbar-thumb-[#15037eb9] scrollbar-track-[#030015] relative z-10">
+          <p className="font-[6px] text-white">{projectDetail.des}</p>
+        </div>
       </div>
 
       <Divider className="my-3 bg-[#ffffff18]" />
@@ -45,7 +45,8 @@ export default function ProjectCard({
         {projectDetail.skills?.map((skill, index) => (
           <span
             key={index}
-            className="inline-flex items-center gap-1 rounded-md bg-yellow-500 px-3 py-1 text-sm font-medium text-black shadow transition hover:bg-yellow-600"
+            className="inline-flex items-center gap-1 rounded-xl px-3 py-1 text-sm font-normal text-black shadow transition"
+            style={{ backgroundColor: '#f3a526' }}
           >
             {skill.icon}
             {skill.name}
@@ -57,7 +58,7 @@ export default function ProjectCard({
       <div className="flex w-full justify-between px-4 relative z-20">
         <Link href={projectDetail.github} target="_blank" className="no-underline">
           <button
-            className="inline-flex items-center justify-center rounded-xl border-2 border-primary bg-transparent px-4 py-2 text-primary transition hover:bg-primary hover:text-white"
+            className="inline-flex items-center justify-center rounded-xl border-2 border-primary bg-transparent px-4 py-2 text-primary transition hover:text-primary/80"
             aria-label="GitHub"
           >
             <FaGithub />
@@ -65,7 +66,7 @@ export default function ProjectCard({
         </Link>
         <Link href={projectDetail.demo} target="_blank" className="no-underline">
           <button
-            className="inline-flex items-center rounded-xl border-2 border-primary bg-primary px-4 py-2 text-white transition hover:bg-primary/80"
+            className="inline-flex items-center rounded-xl border-2 border-primary bg-transparent px-4 py-2 text-primary transition hover:text-primary/80"
           >
             Demo
           </button>

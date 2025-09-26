@@ -32,21 +32,18 @@ const Hero = () => {
         <Marquee pauseOnHover>
           <div className="flex">
             {Object.keys(allSkills).map((key, index) => {
-              const item = allSkills[key as keyof typeof allSkills];
-              return (
-                <div className="mx-2 cursor-pointer" key={index}>
-                  <Chip
-                    className="text-1xl p-5 hover:border-warning hover:text-warning md:p-8 md:text-3xl"
-                    color="primary"
-                    variant="bordered"
-                    radius="md"
-                    startContent={item.icon}
-                  >
-                    {item.name}
-                  </Chip>
-                </div>
-              );
-            })}
+  const item = allSkills[key as keyof typeof allSkills];
+  return (
+    <div className="mx-2 cursor-pointer" key={index}>
+      <span
+        className="inline-flex items-center gap-2 rounded-xl border-2 border-primary px-5 py-3 text-1xl text-primary transition hover:border-warning hover:text-warning md:px-8 md:py-4 md:text-3xl"
+      >
+        {item.icon}
+        {item.name}
+      </span>
+    </div>
+  );
+})}
           </div>
         </Marquee>
       </div>

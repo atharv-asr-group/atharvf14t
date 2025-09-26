@@ -40,11 +40,11 @@ export default function useSocialMediaLinks() {
     },
     email: {
       link: 'mailto:atharvdxb14@gmail.com', // Replace with your email address
-      icon: <FaEnvelope className="text-blue-500" />,
+      icon: <FaEnvelope/>,
     },
     instagram: {
       link: 'https://www.instagram.com/atharvf14t/',
-      icon: <FaInstagram className="text-blue-500" />,
+      icon: <FaInstagram />,
     },
   };
 
